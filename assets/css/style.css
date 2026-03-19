@@ -826,9 +826,9 @@ main {
 }
 
 .clients-item img {
-  max-width: 100px;
+  max-width: 150px;
   max-height: 100px;
-  width: 100px;
+  width: 150px;
   height: auto;
   object-fit: contain;
   filter: grayscale(1);
