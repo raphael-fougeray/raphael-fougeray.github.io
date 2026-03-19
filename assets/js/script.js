@@ -161,3 +161,26 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Lightbox
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
+
+document.querySelectorAll(".project-img img").forEach(img => {
+  img.addEventListener("click", function (e) {
+    e.preventDefault();
+    lightbox.style.display = "block";
+    lightboxImg.src = this.src;
+  });
+});
+
+closeBtn.onclick = function () {
+  lightbox.style.display = "none";
+};
+
+lightbox.onclick = function (e) {
+  if (e.target !== lightboxImg) {
+    lightbox.style.display = "none";
+  }
+};
