@@ -808,7 +808,7 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
@@ -828,7 +828,7 @@ main {
 .clients-item img {
   max-width: 80px;
   max-height: 50px;
-  width: auto;
+  width: 50px;
   height: auto;
   object-fit: contain;
   filter: grayscale(1);
