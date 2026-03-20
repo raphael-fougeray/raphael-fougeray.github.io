@@ -1993,6 +1993,7 @@ textarea.form-input::-webkit-resizer {
     right: 0;
     border-radius: 20px 20px;
     padding: 0 20px;
+    margin-bottom: 20px;
   }
 
   .navbar-list {
@@ -2123,6 +2124,7 @@ textarea.form-input::-webkit-resizer {
   .main-content {
     min-width: 75%;
     width: 75%;
+    margin: 0;
   }
 
 
