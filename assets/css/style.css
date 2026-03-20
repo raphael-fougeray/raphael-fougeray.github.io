@@ -1112,7 +1112,7 @@ main {
 
 .project-item-icon-box {
   --scale: 0.8;
-
+  backdrop-filter: blur(5px);
   background: var(--jet);
   color: var(--orange-yellow-crayola);
   position: absolute;
@@ -2117,13 +2117,13 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
     align-items: stretch;
     gap: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 75px;
   }
 
   .main-content {
     min-width: 75%;
     width: 75%;
-    margin-bottom: 60px;
+    margin-bottom: 75px;
     margin-top: 0;
   }
 
