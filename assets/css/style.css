@@ -1984,15 +1984,14 @@ textarea.form-input::-webkit-resizer {
    */
 
   .navbar {
-    position: absolute;
+    position: sticky;
     bottom: auto;
     top: 0;
-    left: auto;
+    left: 0;
     right: 0;
     width: max-content;
     border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
+    padding: 20px 20px;
   }
 
   .navbar-list {
