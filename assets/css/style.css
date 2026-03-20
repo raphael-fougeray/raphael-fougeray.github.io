@@ -1750,7 +1750,7 @@ textarea.form-input::-webkit-resizer {
 
   .timeline-item ul {
     margin-top: 15px;
-    padding-left: 10px;
+    padding-left: 0px;
   }
 
 
@@ -1981,6 +1981,7 @@ textarea.form-input::-webkit-resizer {
     position: relative;
     width: max-content;
     margin: auto;
+    padding-top: 80px;
   }
 
 
