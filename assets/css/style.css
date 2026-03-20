@@ -933,6 +933,8 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
 }
 
 
@@ -2115,12 +2117,12 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
     align-items: stretch;
     gap: 25px;
+    margin-bottom: 60px;
   }
 
   .main-content {
     min-width: 75%;
     width: 75%;
-    margin: 0;
   }
 
 
