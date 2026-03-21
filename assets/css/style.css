@@ -595,7 +595,8 @@ main {
 }
 
 .service-icon-box {
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  margin-top: 5px;
   color: var(--orange-yellow-crayola);
 }
 
@@ -604,7 +605,7 @@ main {
 }
 
 .service-content-box {
-  text-align: center;
+  text-align: left;
 }
 
 .service-item-title {
