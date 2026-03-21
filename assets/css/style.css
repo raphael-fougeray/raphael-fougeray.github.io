@@ -831,7 +831,8 @@ main {
 }
 
 .clients-item img {
-  width: 100%;
+  height: 120px;
+  width: auto;
   object-fit: contain;
   filter: none;
   transition: transform 0.25s ease-in-out;
