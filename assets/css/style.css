@@ -826,7 +826,8 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  flex: 0 0 auto;   /* 🔥 très important */
+  min-width: auto;  /* optionnel */
   scroll-snap-align: start;
 }
 
@@ -1724,7 +1725,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .clients-item {
-    min-width: calc(33.33% - 35px);
+    flex: 0 0 auto;
   }
 
 
@@ -2029,7 +2030,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-width: calc(25% - 38px);
+    flex: 0 0 auto;
   }
 
 
