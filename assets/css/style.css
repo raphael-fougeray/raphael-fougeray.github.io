@@ -994,6 +994,69 @@ main {
 }
 
 
+/**
+ * #software 
+ */
+
+.software {
+  margin-bottom: 35px;
+}
+
+.software-title {
+  margin-bottom: 20px;
+}
+
+.software-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.software-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.software-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.software-icon-box {
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: var(--orange-yellow-crayola);
+}
+
+.software-icon-box img {
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.software-content-box {
+  text-align: left;
+}
+
+.software-item-title {
+  margin-bottom: 7px;
+}
+
+.software-item-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
 
 /*-----------------------------------*\
   #PORTFOLIO
