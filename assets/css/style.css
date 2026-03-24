@@ -1129,6 +1129,7 @@ main {
 
 .project-item {
   display: none;
+  break-inside: avoid;
 }
 
 .project-item.active {
@@ -1226,7 +1227,6 @@ main {
   color: var(--white-2);
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
-  text-transform: capitalize;
   line-height: 1.3;
 }
 
