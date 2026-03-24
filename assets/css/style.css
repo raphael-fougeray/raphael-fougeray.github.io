@@ -602,6 +602,9 @@ main {
 
 .service-icon-box img {
   margin: auto;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .service-content-box {
@@ -826,8 +829,10 @@ main {
 }
 
 .clients-item {
-  flex: 0 0 auto;   /* 🔥 très important */
-  min-width: auto;  /* optionnel */
+  flex: 0 0 auto;
+  /* 🔥 très important */
+  min-width: auto;
+  /* optionnel */
   scroll-snap-align: start;
 }
 
