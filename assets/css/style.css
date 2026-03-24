@@ -602,9 +602,6 @@ main {
 
 .service-icon-box img {
   margin: auto;
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
 }
 
 .service-content-box {
@@ -1031,14 +1028,14 @@ main {
 }
 
 .software-icon-box {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 5px;
   color: var(--orange-yellow-crayola);
 }
 
 .software-icon-box img {
   margin: auto;
-  height: 50px
+  height: 40px
 }
 
 .software-content-box {
@@ -2110,7 +2107,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .software-icon-box img {
-    height: 80px
+    height: 60px
   }
 
 
