@@ -1031,14 +1031,14 @@ main {
 }
 
 .software-icon-box {
-  margin-bottom: 0;
+  margin-bottom: 5px;
   margin-top: 5px;
   color: var(--orange-yellow-crayola);
 }
 
 .software-icon-box img {
   margin: auto;
-  object-fit: contain;
+  height: 50px
 }
 
 .software-content-box {
@@ -2109,6 +2109,9 @@ textarea.form-input::-webkit-resizer {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .software-icon-box img {
+    height: 80px
+  }
 
 
   /**
