@@ -334,8 +334,6 @@ main {
 
 
 
-
-
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
@@ -1121,14 +1119,16 @@ main {
 }
 
 .project-list {
-  display: grid;
-  grid-template-columns: 1fr;
+  column-count: 1;
+  column-gap: 30px;
   gap: 30px;
   margin-bottom: 10px;
 }
 
 .project-item {
-  display: none;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
   break-inside: avoid;
 }
 
@@ -1147,14 +1147,10 @@ main {
   }
 }
 
-.project-item>a {
-  width: 100%;
-}
-
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: auto;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -1971,7 +1967,7 @@ textarea.form-input::-webkit-resizer {
 
   .project-list,
   .blog-posts-list {
-    grid-template-columns: 1fr 1fr;
+    column-count: 2;
   }
 
 
@@ -2103,7 +2099,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .project-list {
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
   }
 
   .software-icon-box img {
