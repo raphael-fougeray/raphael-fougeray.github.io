@@ -64,13 +64,32 @@ const selectOutreach = document.querySelector(".outreach [data-select]");
 const selectItemsOutreach = document.querySelectorAll(".outreach [data-select-item]");
 const selectValueOutreach = document.querySelector(".outreach [data-selecct-value]");
 const filterBtnOutreach = document.querySelectorAll(".outreach [data-filter-btn]");
+const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
+const filterFuncOutreach = function (selectedValue) {
 
-console.log(selectOutreach);
+  for (let i = 0; i < filterItemsOutreach.length; i++) {
 
+    if (selectedValue === "all") {
+      filterItemsOutreach[i].classList.add("active");
+    } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
+      filterItemsOutreach[i].classList.add("active");
+    } else {
+      filterItemsOutreach[i].classList.remove("active");
+    }
+
+  }
+
+};
+
+console.log("selectOutreach =", selectOutreach);
+
+// TON IF (inchangé)
 if (selectOutreach) {
-  selectOutreach.addEventListener("click", function () { elementToggleFunc(this); });
 
-  // add event in all select items
+  selectOutreach.addEventListener("click", function () {
+    elementToggleFunc(this);
+  });
+
   for (let i = 0; i < selectItemsOutreach.length; i++) {
     selectItemsOutreach[i].addEventListener("click", function () {
 
@@ -82,27 +101,10 @@ if (selectOutreach) {
     });
   }
 
-  // filter variables
-  const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
-
-  const filterFuncOutreach = function (selectedValue) {
-
-    for (let i = 0; i < filterItemsOutreach.length; i++) {
-
-      if (selectedValue === "all") {
-        filterItemsOutreach[i].classList.add("active");
-      } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
-        filterItemsOutreach[i].classList.add("active");
-      } else {
-        filterItemsOutreach[i].classList.remove("active");
-      }
-
-    }
-
-  }
 }
 
-// add event in all filter button items
+
+// add event in all filter button items (reste pareil)
 let lastClickedBtnOutreach = filterBtnOutreach[0];
 
 for (let i = 0; i < filterBtnOutreach.length; i++) {
@@ -128,6 +130,23 @@ const selectPortfolio = document.querySelector(".portfolio [data-select]");
 const selectItemsPortfolio = document.querySelectorAll(".portfolio [data-select-item]");
 const selectValuePortfolio = document.querySelector(".portfolio [data-selecct-value]");
 const filterBtnPortfolio = document.querySelectorAll(".portfolio [data-filter-btn]");
+const filterItemsPortfolio = document.querySelectorAll(".portfolio [data-filter-item]");
+
+const filterFuncPortfolio = function (selectedValue) {
+
+  for (let i = 0; i < filterItemsPortfolio.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItemsPortfolio[i].classList.add("active");
+    } else if (selectedValue === filterItemsPortfolio[i].dataset.category) {
+      filterItemsPortfolio[i].classList.add("active");
+    } else {
+      filterItemsPortfolio[i].classList.remove("active");
+    }
+
+  }
+
+};
 
 console.log(selectPortfolio);
 
@@ -148,23 +167,25 @@ if (selectPortfolio) {
     });
   }
 
-  let lastClickedBtnPortfolio = filterBtnPortfolio[0];
+}
 
-  for (let i = 0; i < filterBtnPortfolio.length; i++) {
 
-    filterBtnPortfolio[i].addEventListener("click", function () {
+// add event in all filter button items (reste pareil)
+let lastClickedBtnPortfolio = filterBtnPortfolio[0];
 
-      let selectedValue = this.innerText.toLowerCase();
-      selectValuePortfolio.innerText = this.innerText;
-      filterFuncPortfolio(selectedValue);
+for (let i = 0; i < filterBtnPortfolio.length; i++) {
 
-      lastClickedBtnPortfolio.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtnPortfolio = this;
+  filterBtnPortfolio[i].addEventListener("click", function () {
 
-    });
+    let selectedValue = this.innerText.toLowerCase();
+    selectValuePortfolio.innerText = this.innerText;
+    filterFuncPortfolio(selectedValue);
 
-  }
+    lastClickedBtnPortfolio.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtnPortfolio = this;
+
+  });
 
 }
 
