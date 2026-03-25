@@ -824,17 +824,12 @@ main {
 }
 
 .clients-item {
-  flex: 0 0 auto;
-  /* 🔥 très important */
-  min-width: auto;
-  /* optionnel */
+  min-width: 50%;
   scroll-snap-align: start;
 }
 
 .clients-item img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
+  width: 100%;
   filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
@@ -1784,7 +1779,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .clients-item {
-    flex: 0 0 auto;
+    min-width: calc(33.33% - 35px);
   }
 
 
@@ -2089,7 +2084,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    flex: 0 0 auto;
+    min-width: calc(25% - 38px);
   }
 
 
