@@ -65,37 +65,41 @@ const selectItemsOutreach = document.querySelectorAll(".outreach [data-select-it
 const selectValueOutreach = document.querySelector(".outreach [data-selecct-value]");
 const filterBtnOutreach = document.querySelectorAll(".outreach [data-filter-btn]");
 
-selectOutreach.addEventListener("click", function () { elementToggleFunc(this); });
+console.log(selectOutreach);
 
-// add event in all select items
-for (let i = 0; i < selectItemsOutreach.length; i++) {
-  selectItemsOutreach[i].addEventListener("click", function () {
+if (selectOutreach) {
+  selectOutreach.addEventListener("click", function () { elementToggleFunc(this); });
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValueOutreach.innerText = this.innerText;
-    elementToggleFunc(selectOutreach);
-    filterFuncOutreach(selectedValue);
+  // add event in all select items
+  for (let i = 0; i < selectItemsOutreach.length; i++) {
+    selectItemsOutreach[i].addEventListener("click", function () {
 
-  });
-}
+      let selectedValue = this.innerText.toLowerCase();
+      selectValueOutreach.innerText = this.innerText;
+      elementToggleFunc(selectOutreach);
+      filterFuncOutreach(selectedValue);
 
-// filter variables
-const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
+    });
+  }
 
-const filterFuncOutreach = function (selectedValue) {
+  // filter variables
+  const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
 
-  for (let i = 0; i < filterItemsOutreach.length; i++) {
+  const filterFuncOutreach = function (selectedValue) {
 
-    if (selectedValue === "all") {
-      filterItemsOutreach[i].classList.add("active");
-    } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
-      filterItemsOutreach[i].classList.add("active");
-    } else {
-      filterItemsOutreach[i].classList.remove("active");
+    for (let i = 0; i < filterItemsOutreach.length; i++) {
+
+      if (selectedValue === "all") {
+        filterItemsOutreach[i].classList.add("active");
+      } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
+        filterItemsOutreach[i].classList.add("active");
+      } else {
+        filterItemsOutreach[i].classList.remove("active");
+      }
+
     }
 
   }
-
 }
 
 // add event in all filter button items
@@ -125,55 +129,42 @@ const selectItemsPortfolio = document.querySelectorAll(".portfolio [data-select-
 const selectValuePortfolio = document.querySelector(".portfolio [data-selecct-value]");
 const filterBtnPortfolio = document.querySelectorAll(".portfolio [data-filter-btn]");
 
-selectPortfolio.addEventListener("click", function () { elementToggleFunc(this); });
+console.log(selectPortfolio);
 
-// add event in all select items
-for (let i = 0; i < selectItemsPortfolio.length; i++) {
-  selectItemsPortfolio[i].addEventListener("click", function () {
+if (selectPortfolio) {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValuePortfolio.innerText = this.innerText;
-    elementToggleFunc(selectPortfolio);
-    filterFuncPortfolio(selectedValue);
-
+  selectPortfolio.addEventListener("click", function () {
+    elementToggleFunc(this);
   });
-}
 
-// filter variables
-const filterItemsPortfolio = document.querySelectorAll(".portfolio [data-filter-item]");
+  for (let i = 0; i < selectItemsPortfolio.length; i++) {
+    selectItemsPortfolio[i].addEventListener("click", function () {
 
-const filterFuncPortfolio = function (selectedValue) {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValuePortfolio.innerText = this.innerText;
+      elementToggleFunc(selectPortfolio);
+      filterFuncPortfolio(selectedValue);
 
-  for (let i = 0; i < filterItemsPortfolio.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItemsPortfolio[i].classList.add("active");
-    } else if (selectedValue === filterItemsPortfolio[i].dataset.category) {
-      filterItemsPortfolio[i].classList.add("active");
-    } else {
-      filterItemsPortfolio[i].classList.remove("active");
-    }
-
+    });
   }
 
-}
+  let lastClickedBtnPortfolio = filterBtnPortfolio[0];
 
-// add event in all filter button items
-let lastClickedBtnPortfolio = filterBtnPortfolio[0];
+  for (let i = 0; i < filterBtnPortfolio.length; i++) {
 
-for (let i = 0; i < filterBtnPortfolio.length; i++) {
+    filterBtnPortfolio[i].addEventListener("click", function () {
 
-  filterBtnPortfolio[i].addEventListener("click", function () {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValuePortfolio.innerText = this.innerText;
+      filterFuncPortfolio(selectedValue);
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValuePortfolio.innerText = this.innerText;
-    filterFuncPortfolio(selectedValue);
+      lastClickedBtnPortfolio.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtnPortfolio = this;
 
-    lastClickedBtnPortfolio.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtnPortfolio = this;
+    });
 
-  });
+  }
 
 }
 
