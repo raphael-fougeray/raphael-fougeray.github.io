@@ -57,137 +57,64 @@ if (modalCloseBtn && overlay) {
   overlay.addEventListener("click", testimonialsModalFunc);
 }
 
-// ===== OUTREACH =====
-
 // custom select variables
-const selectOutreach = document.querySelector(".outreach [data-select]");
-const selectItemsOutreach = document.querySelectorAll(".outreach [data-select-item]");
-const selectValueOutreach = document.querySelector(".outreach [data-selecct-value]");
-const filterBtnOutreach = document.querySelectorAll(".outreach [data-filter-btn]");
-const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
-const filterFuncOutreach = function (selectedValue) {
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-  for (let i = 0; i < filterItemsOutreach.length; i++) {
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
 
     if (selectedValue === "all") {
-      filterItemsOutreach[i].classList.add("active");
-    } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
-      filterItemsOutreach[i].classList.add("active");
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
     } else {
-      filterItemsOutreach[i].classList.remove("active");
+      filterItems[i].classList.remove("active");
     }
 
   }
 
-};
-
-console.log("selectOutreach =", selectOutreach);
-
-// TON IF (inchangé)
-if (selectOutreach) {
-
-  selectOutreach.addEventListener("click", function () {
-    elementToggleFunc(this);
-  });
-
-  for (let i = 0; i < selectItemsOutreach.length; i++) {
-    selectItemsOutreach[i].addEventListener("click", function () {
-
-      let selectedValue = this.innerText.toLowerCase();
-      selectValueOutreach.innerText = this.innerText;
-      elementToggleFunc(selectOutreach);
-      filterFuncOutreach(selectedValue);
-
-    });
-  }
-
 }
 
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
 
-// add event in all filter button items (reste pareil)
-let lastClickedBtnOutreach = filterBtnOutreach[0];
+for (let i = 0; i < filterBtn.length; i++) {
 
-for (let i = 0; i < filterBtnOutreach.length; i++) {
-
-  filterBtnOutreach[i].addEventListener("click", function () {
+  filterBtn[i].addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
-    selectValueOutreach.innerText = this.innerText;
-    filterFuncOutreach(selectedValue);
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
 
-    lastClickedBtnOutreach.classList.remove("active");
+    lastClickedBtn.classList.remove("active");
     this.classList.add("active");
-    lastClickedBtnOutreach = this;
+    lastClickedBtn = this;
 
   });
 
 }
 
-// ===== PORTFOLIO =====
-
-// custom select variables
-const selectPortfolio = document.querySelector(".portfolio [data-select]");
-const selectItemsPortfolio = document.querySelectorAll(".portfolio [data-select-item]");
-const selectValuePortfolio = document.querySelector(".portfolio [data-selecct-value]");
-const filterBtnPortfolio = document.querySelectorAll(".portfolio [data-filter-btn]");
-const filterItemsPortfolio = document.querySelectorAll(".portfolio [data-filter-item]");
-
-const filterFuncPortfolio = function (selectedValue) {
-
-  for (let i = 0; i < filterItemsPortfolio.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItemsPortfolio[i].classList.add("active");
-    } else if (selectedValue === filterItemsPortfolio[i].dataset.category) {
-      filterItemsPortfolio[i].classList.add("active");
-    } else {
-      filterItemsPortfolio[i].classList.remove("active");
-    }
-
-  }
-
-};
-
-console.log(selectPortfolio);
-
-if (selectPortfolio) {
-
-  selectPortfolio.addEventListener("click", function () {
-    elementToggleFunc(this);
-  });
-
-  for (let i = 0; i < selectItemsPortfolio.length; i++) {
-    selectItemsPortfolio[i].addEventListener("click", function () {
-
-      let selectedValue = this.innerText.toLowerCase();
-      selectValuePortfolio.innerText = this.innerText;
-      elementToggleFunc(selectPortfolio);
-      filterFuncPortfolio(selectedValue);
-
-    });
-  }
-
-}
-
-
-// add event in all filter button items (reste pareil)
-let lastClickedBtnPortfolio = filterBtnPortfolio[0];
-
-for (let i = 0; i < filterBtnPortfolio.length; i++) {
-
-  filterBtnPortfolio[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValuePortfolio.innerText = this.innerText;
-    filterFuncPortfolio(selectedValue);
-
-    lastClickedBtnPortfolio.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtnPortfolio = this;
-
-  });
-
-}
 
 
 // contact form variables
