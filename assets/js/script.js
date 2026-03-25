@@ -57,74 +57,125 @@ if (modalCloseBtn && overlay) {
   overlay.addEventListener("click", testimonialsModalFunc);
 }
 
+// ===== OUTREACH =====
 
+// custom select variables
+const selectOutreach = document.querySelector(".outreach [data-select]");
+const selectItemsOutreach = document.querySelectorAll(".outreach [data-select-item]");
+const selectValueOutreach = document.querySelector(".outreach [data-selecct-value]");
+const filterBtnOutreach = document.querySelectorAll(".outreach [data-filter-btn]");
 
-// FILTER SYSTEM (scoped per section)
+selectOutreach.addEventListener("click", function () { elementToggleFunc(this); });
 
-const projectSections = document.querySelectorAll(".projects");
+// add event in all select items
+for (let i = 0; i < selectItemsOutreach.length; i++) {
+  selectItemsOutreach[i].addEventListener("click", function () {
 
-projectSections.forEach(section => {
+    let selectedValue = this.innerText.toLowerCase();
+    selectValueOutreach.innerText = this.innerText;
+    elementToggleFunc(selectOutreach);
+    filterFuncOutreach(selectedValue);
 
-  const select = section.querySelector("[data-select]");
-  const selectItems = section.querySelectorAll("[data-select-item]");
-  const selectValue = section.querySelector("[data-selecct-value]");
-  const filterBtns = section.querySelectorAll("[data-filter-btn]");
-  const filterItems = section.querySelectorAll("[data-filter-item]");
+  });
+}
 
-  // toggle select (mobile dropdown)
-  if (select) {
-    select.addEventListener("click", function () {
-      elementToggleFunc(this);
-    });
+// filter variables
+const filterItemsOutreach = document.querySelectorAll(".outreach [data-filter-item]");
+
+const filterFuncOutreach = function (selectedValue) {
+
+  for (let i = 0; i < filterItemsOutreach.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItemsOutreach[i].classList.add("active");
+    } else if (selectedValue === filterItemsOutreach[i].dataset.category) {
+      filterItemsOutreach[i].classList.add("active");
+    } else {
+      filterItemsOutreach[i].classList.remove("active");
+    }
+
   }
 
-  const filterFunc = function (selectedValue) {
+}
 
-    filterItems.forEach(item => {
-      if (selectedValue === "all" || selectedValue === item.dataset.category) {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
+// add event in all filter button items
+let lastClickedBtnOutreach = filterBtnOutreach[0];
 
-  };
+for (let i = 0; i < filterBtnOutreach.length; i++) {
 
-  // select dropdown (mobile)
-  selectItems.forEach(item => {
-    item.addEventListener("click", function () {
+  filterBtnOutreach[i].addEventListener("click", function () {
 
-      const selectedValue = this.innerText.toLowerCase();
+    let selectedValue = this.innerText.toLowerCase();
+    selectValueOutreach.innerText = this.innerText;
+    filterFuncOutreach(selectedValue);
 
-      if (selectValue) selectValue.innerText = this.innerText;
-      if (select) elementToggleFunc(select);
+    lastClickedBtnOutreach.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtnOutreach = this;
 
-      filterFunc(selectedValue);
-
-    });
   });
 
-  // filter buttons (desktop)
-  let lastClickedBtn = filterBtns[0];
+}
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", function () {
+// ===== PORTFOLIO =====
 
-      const selectedValue = this.innerText.toLowerCase();
+// custom select variables
+const selectPortfolio = document.querySelector(".portfolio [data-select]");
+const selectItemsPortfolio = document.querySelectorAll(".portfolio [data-select-item]");
+const selectValuePortfolio = document.querySelector(".portfolio [data-selecct-value]");
+const filterBtnPortfolio = document.querySelectorAll(".portfolio [data-filter-btn]");
 
-      if (selectValue) selectValue.innerText = this.innerText;
+selectPortfolio.addEventListener("click", function () { elementToggleFunc(this); });
 
-      filterFunc(selectedValue);
+// add event in all select items
+for (let i = 0; i < selectItemsPortfolio.length; i++) {
+  selectItemsPortfolio[i].addEventListener("click", function () {
 
-      if (lastClickedBtn) lastClickedBtn.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtn = this;
+    let selectedValue = this.innerText.toLowerCase();
+    selectValuePortfolio.innerText = this.innerText;
+    elementToggleFunc(selectPortfolio);
+    filterFuncPortfolio(selectedValue);
 
-    });
+  });
+}
+
+// filter variables
+const filterItemsPortfolio = document.querySelectorAll(".portfolio [data-filter-item]");
+
+const filterFuncPortfolio = function (selectedValue) {
+
+  for (let i = 0; i < filterItemsPortfolio.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItemsPortfolio[i].classList.add("active");
+    } else if (selectedValue === filterItemsPortfolio[i].dataset.category) {
+      filterItemsPortfolio[i].classList.add("active");
+    } else {
+      filterItemsPortfolio[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items
+let lastClickedBtnPortfolio = filterBtnPortfolio[0];
+
+for (let i = 0; i < filterBtnPortfolio.length; i++) {
+
+  filterBtnPortfolio[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValuePortfolio.innerText = this.innerText;
+    filterFuncPortfolio(selectedValue);
+
+    lastClickedBtnPortfolio.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtnPortfolio = this;
+
   });
 
-});
-
+}
 
 
 // contact form variables
