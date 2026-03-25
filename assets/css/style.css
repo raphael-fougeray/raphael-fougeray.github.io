@@ -2183,13 +2183,13 @@ textarea.form-input::-webkit-resizer {
     justify-content: center;
     align-items: stretch;
     gap: 25px;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
   }
 
   .main-content {
     min-width: 75%;
     width: 75%;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
     margin-top: 0;
   }
 
