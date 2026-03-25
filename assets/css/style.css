@@ -2184,7 +2184,7 @@ textarea.form-input::-webkit-resizer {
   .main-content {
     min-width: 75%;
     width: 75%;
-    margin-bottom: 85px;
+    margin-bottom: 15px;
     margin-top: 0;
   }
 
