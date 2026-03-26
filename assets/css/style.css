@@ -46,7 +46,7 @@
 
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-1: hsl(103, 100%, 11%);
   --eerie-black-2: hsl(240, 2%, 12%);
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
@@ -829,7 +829,7 @@ main {
 }
 
 .clients-item img {
-  width: 100%;
+  height: 100%;
   filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
