@@ -1121,7 +1121,7 @@ main {
 }
 
 .project-item {
-  display: inline-block;
+  display: none;
   width: 100%;
   margin-bottom: 30px;
   break-inside: avoid;
