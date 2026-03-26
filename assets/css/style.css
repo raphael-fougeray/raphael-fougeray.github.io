@@ -840,7 +840,9 @@ main {
   opacity: 0.9;
 }
 
-
+.clients-filter-white {
+  filter: invert(100%) sepia(31%) saturate(2%) hue-rotate(326deg) brightness(113%) contrast(101%);
+}
 
 
 
