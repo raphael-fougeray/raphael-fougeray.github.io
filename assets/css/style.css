@@ -55,7 +55,7 @@
   --eerie-black-2: hsl(161, 24%, 21%);
   /* fond secondaire */
 
-  --smoky-black: hsl(161, 24%, 15%);
+  --smoky-black: hsl(161, 24%, 19%);
   /* très sombre vert */
 
   --white-1: hsl(40, 88%, 78%);
@@ -725,7 +725,7 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 5%);
+  background: hsl(161, 24%, 15%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
