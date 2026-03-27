@@ -48,7 +48,8 @@
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
   --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(103, 100%, 11%) --white-1: hsl(0, 0%, 100%);
+  --smoky-black: hsl(103, 100%, 11%);
+  --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 72%);
   --vegas-gold: hsl(45, 54%, 58%);
@@ -825,6 +826,7 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  height: 6vh;
 }
 
 .clients-item img {
