@@ -55,7 +55,8 @@
   --eerie-black-2: hsl(161, 24%, 21%);
   /* fond secondaire */
 
-  --smoky-black: hsl(173, 21%, 6%);
+  --smoky-black: hsl(161, 24%, 15%);
+  /* très sombre vert */
 
   --white-1: hsl(40, 88%, 78%);
   /* beige clair */
@@ -837,12 +838,11 @@ main {
 }
 
 .clients-item {
-  scroll-snap-align: start;
+  min-height: 50% scroll-snap-align: start;
 }
 
 .clients-item img {
-  height: 10vh;
-  filter: none;
+  height: 100% filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
 }
@@ -1789,7 +1789,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .clients-item {
-    min-width: calc(33.33% - 35px);
+    min-height: calc(33.33% - 35px);
   }
 
 
@@ -2094,7 +2094,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-width: calc(25% - 38px);
+    min-height: calc(25% - 38px);
   }
 
 
