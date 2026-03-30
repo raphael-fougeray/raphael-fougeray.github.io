@@ -826,7 +826,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 5px;
+  gap: 15px;
   padding: 10px;
   padding-bottom: 25px;
   overflow-x: auto;
@@ -836,16 +836,15 @@ main {
 }
 
 .clients-item {
-  height: 80px;
+  height: 100px;
   flex: 0 0 auto;
 }
 
 .clients-item img {
-  height: 80px;
+  height: 100px;
   filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
-  background: blue;
 }
 
 .clients-item img:hover {
@@ -1783,9 +1782,8 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 5px;
-    margin: 0 -30px;
-    padding: 25px;
+    gap: 20px;
+    padding: 20px;
     scroll-padding-inline: 5px;
   }
 
@@ -2092,7 +2090,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    height: 100px;
+    height: 150px;
   }
 
 
