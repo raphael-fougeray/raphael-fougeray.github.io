@@ -24,8 +24,8 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(to bottom right,
-      hsl(240, 1%, 25%) 3%,
-      hsl(0, 0%, 19%) 97%);
+      hsl(161, 24%, 21%) 0%,
+      hsla(161, 24%, 21%, 0) 50%);
   --bg-gradient-jet: linear-gradient(to bottom right,
       hsla(161, 24%, 21%, 0.25) 0%,
       hsla(173, 21%, 8%, 0) 100%),
@@ -828,7 +828,7 @@ main {
   align-items: flex-start;
   gap: 5px;
   margin: 0 -15px;
-  padding: 5px;
+  padding: 25px;
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -1784,10 +1784,10 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 50px;
+    gap: 5px;
     margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
+    padding: 25px;
+    scroll-padding-inline: 25px;
   }
 
 
