@@ -1508,11 +1508,6 @@ textarea.form-input::-webkit-resizer {
    * client
    */
 
-  .clients-item {
-    min-width: calc(33.33% - 10px);
-  }
-
-
 
   /**
    * #PORTFOLIO, BLOG 
