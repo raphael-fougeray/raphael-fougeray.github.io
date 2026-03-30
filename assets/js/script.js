@@ -164,19 +164,23 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.addEventListener("click", function (e) {
 
   const img = e.target.closest(".project-img img");
-
   if (!img) return;
+
+  const item = img.closest(".project-item");
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-
-  console.log("CLICK OK");
+  const title = document.getElementById("lightbox-title");
+  const authors = document.getElementById("lightbox-authors");
 
   lightbox.style.display = "block";
   lightboxImg.src = img.src;
 
-});
+  // 🔥 récupérer les data
+  title.textContent = item.dataset.title;
+  authors.textContent = item.dataset.authors;
 
+});
 // Close button
 document.querySelector(".lightbox-close").onclick = function () {
   document.getElementById("lightbox").style.display = "none";

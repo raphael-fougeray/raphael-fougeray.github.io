@@ -1266,6 +1266,21 @@ main {
   cursor: pointer;
 }
 
+.lightbox-caption {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.lightbox-caption h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.lightbox-caption p {
+  font-size: 14px;
+  color: #ccc;
+}
 
 /*-----------------------------------*\
   #BLOG
