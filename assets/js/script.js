@@ -177,7 +177,7 @@ document.addEventListener("click", function (e) {
   lightboxImg.src = img.src;
 
   // 🔥 récupérer les data
-  title.textContent = item.dataset.title;
+  title.textContent = item.querySelector(".project-title").textContent;
   authors.textContent = item.dataset.authors;
 
 });
@@ -193,4 +193,3 @@ document.getElementById("lightbox").onclick = function (e) {
   }
 };
 
-console.log("JS chargé");
