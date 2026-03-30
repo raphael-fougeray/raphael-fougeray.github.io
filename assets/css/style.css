@@ -521,7 +521,7 @@ main {
 
 .navbar-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
@@ -1777,7 +1777,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 20px;
+    gap: 30px;
     padding: 20px;
   }
 
@@ -2082,6 +2082,11 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* clients */
+
+  .clients-list {
+    gap: 50px;
+    padding: 20px;
+  }
 
   .clients-item {
     height: 150px;
