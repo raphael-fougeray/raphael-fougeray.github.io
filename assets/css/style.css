@@ -826,9 +826,9 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 15px;
+  gap: 5px;
   margin: 0 -15px;
-  padding: 25px;
+  padding: 5px;
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -838,12 +838,12 @@ main {
 }
 
 .clients-item {
-  min-height: 50%;
+  height: 80px;
   scroll-snap-align: start;
 }
 
 .clients-item img {
-  height: 100%;
+  height: 80px;
   filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
@@ -1790,9 +1790,6 @@ textarea.form-input::-webkit-resizer {
     scroll-padding-inline: 45px;
   }
 
-  .clients-item {
-    min-height: calc(33.33% - 35px);
-  }
 
 
 
@@ -2096,7 +2093,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-height: calc(25% - 38px);
+    height: 100px;
   }
 
 
