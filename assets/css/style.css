@@ -24,8 +24,8 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(to bottom right,
-      hsl(161, 24%, 21%) 0%,
-      hsla(161, 24%, 21%, 0) 50%);
+      hsl(240, 1%, 25%) 3%,
+      hsl(0, 0%, 19%) 97%);
   --bg-gradient-jet: linear-gradient(to bottom right,
       hsla(161, 24%, 21%, 0.25) 0%,
       hsla(173, 21%, 8%, 0) 100%),
@@ -388,7 +388,7 @@ main {
 
 .info-content .title {
   color: var(--white-1);
-  background: var(--onyx);
+  background: var(--smoky-black);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
@@ -403,7 +403,7 @@ main {
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
+  background: var(--smoky-black);
   padding: 10px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
@@ -511,7 +511,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--smoky-black);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -590,7 +590,7 @@ main {
 
 .service-item {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: var(--smoky-black);
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -601,7 +601,7 @@ main {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  background: var(--smoky-black);
   border-radius: inherit;
   z-index: -1;
 }
@@ -840,6 +840,7 @@ main {
 .clients-item {
   height: 80px;
   scroll-snap-align: start;
+  flex: 0 0 auto;
 }
 
 .clients-item img {
@@ -847,6 +848,7 @@ main {
   filter: none;
   transition: transform 0.25s ease-in-out;
   will-change: transform;
+  background: red;
 }
 
 .clients-item img:hover {
@@ -1787,7 +1789,7 @@ textarea.form-input::-webkit-resizer {
     gap: 5px;
     margin: 0 -30px;
     padding: 25px;
-    scroll-padding-inline: 25px;
+    scroll-padding-inline: 5px;
   }
 
 
