@@ -507,8 +507,8 @@ main {
 \*-----------------------------------*/
 
 .navbar {
-  position: fixed;
-  bottom: env(safe-area-inset-bottom);
+  position: sticky;
+  bottom: 0;
   left: 0;
   width: 100%;
   background: hsla(240, 1%, 17%, 0.60);
